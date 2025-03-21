@@ -1,0 +1,326 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+/* General Layout */
+.layout {
+  display: flex;
+  background-color: #0a0a0a; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  min-height: 100vh;
+  font-family: "Inter", sans-serif; /* Modern font */
+  overflow: hidden; /* Prevent scrolling on the layout itself */
+}
+
+/* Sidebar */
+.left-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px; /* Default width */
+  height: 100vh;
+  padding: 20px;
+  background: rgba(30, 30, 30, 0.8); /* Glassmorphism effect */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  transition: width 0.3s ease-in-out, transform 0.3s ease;
+  z-index: 999; /* Ensure it's below the collapse button */
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.left-sidebar.collapsed {
+  width: 100px; /* Collapsed width */
+}
+
+.left-sidebar.collapsed .logo,
+.left-sidebar.collapsed h2,
+.left-sidebar.collapsed ul li a span {
+  display: none; /* Hide text and logo when collapsed */
+}
+
+.left-sidebar.collapsed ul li a {
+  justify-content: center; /* Center icons when collapsed */
+  padding: 12px; /* Reduce padding for collapsed state */
+}
+
+.left-sidebar:hover {
+  transform: translateX(5px); /* Slight hover effect */
+}
+
+/* Hide scrollbar for the sidebar */
+.left-sidebar::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar */
+}
+
+/* Collapse Button */
+.collapse-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px; /* Move to the left */
+  background: #ffcc00;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.collapse-btn:hover {
+  background: #e6b800;
+  transform: scale(1.1);
+}
+
+.collapse-btn svg {
+  color: #000; /* Ensure the arrow icon is visible */
+  font-size: 1.2rem; /* Adjust icon size */
+}
+
+/* Sidebar links */
+.left-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.logo {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  width: 70px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #007aff; /* Logo color */
+}
+
+.left-sidebar ul li {
+  margin: 20px 0;
+}
+
+.left-sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 12px 20px;
+  background: rgba(0, 122, 255, 0.1); /* Transparent background */
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.left-sidebar ul li a:hover,
+.left-sidebar ul li a:focus {
+  background: rgba(0, 122, 255, 0.2); /* Slightly darker on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Active Link */
+.left-sidebar ul li a.active {
+  background: rgba(76, 175, 80, 0.2); /* Green gradient for active */
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+/* Logout Link */
+.left-sidebar ul li a.logout {
+  background: rgba(255, 77, 79, 0.1); /* Red gradient for logout */
+  border: 1px solid rgba(255, 77, 79, 0.2);
+}
+
+.left-sidebar ul li a.logout:hover,
+.left-sidebar ul li a.logout:focus {
+  background: rgba(255, 77, 79, 0.2); /* Slightly darker on hover */
+}
+
+/* Hide sidebar by default on small screens */
+@media screen and (max-width: 768px) {
+  .left-sidebar {
+    left: -280px;
+  }
+  .left-sidebar.open {
+    left: 0;
+  }
+}
+
+/* Close Button (Only for small screens) */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  display: none; /* Hide by default */
+  z-index: 1001; /* Ensure close button is above sidebar */
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff4d4f; /* Red hover effect */
+}
+
+@media screen and (max-width: 768px) {
+  .close-btn {
+    display: block;
+  }
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 280px; /* Offset for sidebar */
+  flex: 1;
+  padding: 30px;
+  background-color: rgba(26, 26, 26, 0.8); /* Glassmorphism effect */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.3);
+  transition: margin-left 0.3s ease-in-out; /* Smooth transition for margin */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  height: 100vh; /* Ensure it takes full viewport height */
+}
+
+.main-content.collapsed {
+  margin-left: 100px; /* Adjust margin when sidebar is collapsed */
+}
+
+/* Hide scrollbar for the main content */
+.main-content::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar */
+}
+
+/* Adjust margin for small screens */
+@media screen and (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+/* Hamburger Menu (Only on small screens) */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1002; /* Ensure hamburger is above everything */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hamburger:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1); /* Slight hover effect */
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.hamburger:hover .bar {
+  background-color: #007aff; /* Blue hover effect */
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Optional: Animate Hamburger Icon on Open/Close */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Premium Enhancements */
+/* Add a subtle glow to active elements */
+.left-sidebar ul li a.active,
+.submit-button,
+.delete-button {
+  filter: drop-shadow(
+    0 0 8px rgba(76, 175, 80, 0.6)
+  ); /* Green glow for active */
+}
+
+.left-sidebar ul li a.logout {
+  filter: drop-shadow(0 0 8px rgba(255, 77, 79, 0.6)); /* Red glow for logout */
+}
+
+/* Add a gradient overlay to the main content */
+.main-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    145deg,
+    rgba(26, 26, 26, 0.8),
+    rgba(10, 10, 10, 0.8)
+  );
+  pointer-events: none; /* Ensure it doesn't block interactions */
+  z-index: -1;
+}
+
+/* Add a subtle border animation to the sidebar */
+.left-sidebar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -2px;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, #007aff, #005bb5);
+  opacity: 0.6;
+  animation: borderGlow 3s infinite alternate;
+}
+
+@keyframes borderGlow {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1003;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,107 @@
+/* Admin Blogs Page Styles */
+.admin-blogs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #2a2a2a, #1c1c1c);
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.admin-blog-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background: #2c2c2c;
+  color: #fff;
+  padding: 10px;
+}
+
+.admin-blog-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.admin-blog-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.title {
+  color: #ffcc00 !important;
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.admin-blog-content {
+  display: block;
+  margin-top: 12px;
+}
+
+.admin-blog-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.admin-blog-actions button {
+  margin-right: 5px;
+  background: #ffcc00;
+  color: #000;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.admin-blog-actions button:hover {
+  background: #e6b800;
+}
+
+/* Table Styling */
+.ant-table {
+  background: #2a2a2a;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.ant-table-thead > tr > th {
+  background: linear-gradient(135deg, #3a3a3a, #1c1c1c);
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+/* Table Cell Styling */
+.ant-table-cell {
+  background: rgba(44, 44, 44, 0.9) !important;
+  color: #fff;
+}
+
+/* Modal Styling */
+.ant-modal-content {
+  border-radius: 10px;
+  padding: 20px;
+  background: #222 !important;
+  color: #fff;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Modal Header */
+.ant-modal-header {
+  background: rgba(28, 28, 28, 0.9) !important;
+  border-bottom: none !important;
+  color: #ffcc00;
+}
+
+/* Typography */
+.ant-typography {
+  font-size: 20px;
+  color: #fff !important;
+}

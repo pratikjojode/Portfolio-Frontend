@@ -1,0 +1,135 @@
+/* Full-page center alignment */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: rgba(128, 128, 128, 0.224);
+  padding: 20px;
+}
+
+/* Login form box */
+.login-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.login-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Title styling */
+.login-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+/* Form styling */
+.login-form .ant-form-item {
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+.login-form .ant-input {
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: black;
+}
+
+.login-form .ant-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-form .ant-input:hover,
+.login-form .ant-input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Password field */
+.login-form .ant-input-password {
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.login-form .ant-input-password:hover,
+.login-form .ant-input-password:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Submit button */
+.login-form .ant-btn-primary {
+  background: #ff4b2b;
+  border-color: transparent;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  transition: background 0.3s ease-in-out;
+}
+
+.login-form .ant-btn-primary:hover {
+  background: #ff3b1f;
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.login-footer {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.login-footer a {
+  color: #ff6b3b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.login-footer a:hover {
+  color: #ff4b2b;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 30px;
+  }
+
+  .login-title {
+    font-size: 22px;
+  }
+
+  .login-form .ant-input,
+  .login-form .ant-input-password {
+    padding: 12px;
+  }
+
+  .login-form .ant-btn-primary {
+    padding: 12px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,251 @@
+/* Blogs Container - Enhanced Version */
+
+.blogs-container {
+  padding: 60px 20px;
+  text-align: center;
+
+  color: #fff;
+}
+
+/* Title Styling */
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffcc00; /* Consistent yellow */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffcc00, #ff6b6b);
+  display: block;
+  margin: 15px auto;
+  border-radius: 2px;
+  animation: underlineGrow 1s ease-in-out;
+}
+
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+/* Loading Indicator */
+.loading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff6b6b; /* Red for visibility */
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Blogs Grid */
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
+
+/* Blog Card */
+.blog-card {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Blog Image */
+.blog-image {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.blog-card:hover .blog-image img {
+  transform: scale(1.1);
+}
+
+/* Blog Content */
+.blog-content {
+  text-align: left;
+}
+
+/* Blog Title */
+.blog-content h3 {
+  font-size: 1.6rem;
+  color: #ffcc00; /* Yellow for consistency */
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* Description */
+.blog-description {
+  font-size: 1rem;
+  color: #f1f1f1; /* Light gray */
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Blog Meta */
+.blog-meta {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffcc00; /* Yellow for consistency */
+  margin-bottom: 20px;
+}
+
+/* Blog Links */
+.blog-links a {
+  background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-links a:hover {
+  background: linear-gradient(135deg, #c0392b, #ff4c4c);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .blogs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .blog-card {
+    padding: 15px;
+  }
+
+  .blog-image {
+    height: 160px;
+  }
+
+  .blog-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .blog-description,
+  .blog-meta {
+    font-size: 0.95rem;
+  }
+
+  .blog-links a {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .blogs-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .blog-card {
+    padding: 12px;
+  }
+
+  .blog-image {
+    height: 140px;
+  }
+
+  .blog-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .blog-description,
+  .blog-meta {
+    font-size: 0.9rem;
+  }
+
+  .blog-links a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .blog-card {
+    padding: 10px;
+  }
+
+  .blog-image {
+    height: 120px;
+  }
+
+  .blog-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .blog-description,
+  .blog-meta {
+    font-size: 0.85rem;
+  }
+
+  .blog-links a {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

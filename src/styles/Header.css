@@ -1,0 +1,122 @@
+/* Header Container */
+.pratik-header {
+  background: linear-gradient(145deg, #1e1e1e, #121212);
+  padding: 15px 30px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Flexbox Layout */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Align Icon and Text */
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Glowing Icon */
+.glowing-icon {
+  font-size: 28px; /* Reduced from 36px */
+  color: #ff4b2b;
+  filter: drop-shadow(0 0 10px rgba(255, 75, 43, 0.8));
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(255, 75, 43, 0.8));
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(255, 75, 43, 1));
+  }
+}
+
+/* Header Text */
+.header-text {
+  font-size: 22px; /* Reduced from 28px */
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Icons */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Reduced from 30px */
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Reduced from 50px */
+  height: 40px; /* Reduced from 50px */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.icon-link:hover {
+  background: #ff4b2b;
+  transform: translateY(-3px);
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 20px; /* Reduced from 26px */
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.3s ease-in-out;
+}
+
+.icon-link:hover .icon {
+  color: #ffffff;
+}
+
+/* Active Class for Selected Page */
+.icon-link.active {
+  background: #ff4b2b;
+  box-shadow: 0 0 12px rgba(255, 75, 43, 0.8);
+  transform: scale(1.1);
+}
+
+.icon-link.active .icon {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-icons {
+    flex-wrap: wrap;
+    gap: 10px; /* Reduced from 15px */
+  }
+
+  .icon-link {
+    width: 36px; /* Reduced from 40px */
+    height: 36px; /* Reduced from 40px */
+  }
+
+  .icon {
+    font-size: 18px; /* Reduced from 22px */
+  }
+
+  .header-text {
+    font-size: 18px; /* Reduced from 22px */
+  }
+}

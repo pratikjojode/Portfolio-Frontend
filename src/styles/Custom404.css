@@ -1,0 +1,53 @@
+/* Custom404.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #1a1a1a, #000000);
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.error-code {
+  font-size: 9rem;
+  font-weight: 800;
+  color: #ff4b5c;
+  text-shadow: 0 0 10px rgba(255, 75, 92, 0.8);
+}
+
+.error-message {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #d1d1d1;
+  margin-top: 10px;
+}
+
+.error-subtext {
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.home-button {
+  padding: 12px 24px;
+  background-color: #ff4b5c;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(255, 75, 92, 0.5);
+}
+
+.home-button:hover {
+  background-color: #e43e4f;
+  transform: scale(1.05);
+}

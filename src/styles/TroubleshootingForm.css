@@ -1,0 +1,138 @@
+/* Troubleshoot Container */
+.troubleshoot-container {
+  margin: 80px auto;
+  max-width: 900px;
+  background: #242424; /* Rich dark background */
+  padding: 35px; /* Balanced padding */
+  border-radius: 15px; /* Smooth rounded corners */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.troubleshoot-container:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.6); /* Enhanced shadow */
+}
+
+/* Heading */
+.troubleshoot-container h2 {
+  color: #ff5733; /* Bright, attractive accent color */
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 0px 2px 5px rgba(255, 87, 51, 0.4); /* Soft text glow */
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* Balanced spacing */
+}
+
+/* Input Fields */
+input,
+textarea,
+select {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.08); /* Softer input background */
+  color: #ffffff; /* White text */
+  transition: all 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Lighter placeholder text */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  background: rgba(255, 255, 255, 0.15); /* Slightly lighter focus */
+  outline: none;
+  box-shadow: 0px 0px 12px rgba(255, 87, 51, 0.5); /* Subtle glowing effect */
+}
+select {
+  color: black; /* Default text color */
+  background-color: white; /* Background color */
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+select option {
+  color: black; /* Text color of the dropdown options */
+  background-color: white; /* Background color */
+}
+
+/* Button */
+button {
+  background: linear-gradient(135deg, #ff4b2b, #e8411d); /* Modern gradient */
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #e8411d, #ff4b2b); /* Reverse gradient */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0px 5px 20px rgba(255, 75, 43, 0.5); /* Stronger glow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .troubleshoot-container {
+    padding: 25px;
+    margin-top: 30px;
+  }
+
+  .troubleshoot-container h2 {
+    font-size: 22px;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .troubleshoot-container {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .troubleshoot-container h2 {
+    font-size: 20px;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 15px;
+  }
+}

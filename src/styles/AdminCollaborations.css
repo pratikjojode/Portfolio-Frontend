@@ -1,0 +1,82 @@
+/* General Styling */
+.admin-collaborations-container {
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f4f6f8;
+}
+
+/* Switch Styling */
+.view-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.view-toggle .ant-switch {
+  background-color: #1890ff;
+}
+
+/* Table Styling */
+.ant-table {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ant-table-thead > tr > th {
+  background: #1890ff !important;
+  color: white !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ant-table-tbody > tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Grid Card Styling */
+.collaboration-card {
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.collaboration-card:hover {
+  transform: translateY(-5px);
+}
+
+.collaboration-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.collaboration-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Button Styling */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.action-buttons .ant-btn {
+  border-radius: 5px;
+}
+
+/* Modal Styling */
+.ant-modal-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+}

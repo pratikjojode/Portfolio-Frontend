@@ -1,0 +1,261 @@
+/* ProjectsPratik.css - Enhanced Version */
+
+.projects-container {
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.title {
+  font-size: 3rem; /* Larger title */
+  margin-bottom: 40px;
+  color: #fff; /* White text */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffcc00, #ff6b6b);
+  display: block;
+  margin: 15px auto;
+  border-radius: 2px;
+  animation: underlineGrow 1s ease-in-out;
+}
+
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+/* Loading Text */
+.loading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff6b6b; /* Red */
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Project Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
+
+/* Project Card */
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Project Image */
+.project-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+/* Project Content */
+.project-content {
+  text-align: center;
+}
+
+.project-content h3 {
+  font-size: 1.6rem;
+  color: #ffcc00; /* Yellow */
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #f1f1f1; /* Light gray */
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.project-technologies {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffcc00; /* Yellow */
+  margin-bottom: 20px;
+}
+
+/* Project Links */
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.project-links a {
+  background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-links a:hover {
+  background: linear-gradient(135deg, #c0392b, #ff4c4c);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .project-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-description,
+  .project-technologies {
+    font-size: 0.95rem;
+  }
+
+  .project-links a {
+    padding: 10px 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .project-image {
+    height: 150px;
+  }
+
+  .project-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-description,
+  .project-technologies {
+    font-size: 0.9rem;
+  }
+
+  .project-links a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .project-card {
+    padding: 12px;
+  }
+
+  .project-image {
+    height: 120px;
+  }
+
+  .project-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-description,
+  .project-technologies {
+    font-size: 0.85rem;
+  }
+
+  .project-links a {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}

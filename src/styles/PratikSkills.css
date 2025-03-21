@@ -1,0 +1,211 @@
+/* PratikSkills.css - Enhanced Version */
+
+.skills-container {
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffcc00, #ff6b6b);
+  display: block;
+  margin: 15px auto;
+  border-radius: 2px;
+  animation: underlineGrow 1s ease-in-out;
+}
+
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+.loading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff6b6b;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+/* Skill Card Styling */
+.skill-card {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Skill Image */
+.skill-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.skill-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover .skill-image img {
+  transform: scale(1.1);
+}
+
+/* Skill Content */
+.skill-content {
+  text-align: left;
+}
+
+.skill-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.skill-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f1f1f1;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .skill-card {
+    padding: 15px;
+  }
+
+  .skill-image {
+    height: 180px;
+  }
+
+  .skill-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .skill-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    padding: 12px;
+  }
+
+  .skill-image {
+    height: 150px;
+  }
+
+  .skill-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .skill-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .skill-card {
+    padding: 10px;
+  }
+
+  .skill-image {
+    height: 120px;
+  }
+
+  .skill-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-description {
+    font-size: 0.85rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

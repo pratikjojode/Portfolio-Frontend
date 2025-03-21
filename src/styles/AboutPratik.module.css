@@ -1,0 +1,351 @@
+/* General Styles */
+.aboutContainer {
+  padding: 40px 20px;
+  background: #1a1a1a; /* Dark background */
+  color: #f5f5f5; /* Light text for contrast */
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+/* Tabs Section */
+.tabsContainer {
+  margin: 0 auto;
+  padding: 20px;
+  background: #2c2c2c; /* Slightly lighter dark background */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Dark shadow for depth */
+}
+
+.tabList {
+  display: flex;
+  flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #444; /* Subtle border for tab list */
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+  color: #5dff05; /* Light gray for inactive tabs */
+  transition: all 0.3s ease;
+  border-radius: 8px 8px 0 0;
+  font-size: 1rem; /* Base font size for tabs */
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+.react-tabs__tab--selected {
+  color: #fff;
+  border-bottom: 3px solid #3498db; /* Bright blue for selected tab */
+}
+
+/* About Me Tab */
+.aboutContent {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #3498db; /* Bright blue for the title */
+  margin-bottom: 20px;
+}
+
+.myImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #3498db; /* Bright blue border around the image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Dark shadow */
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ddd; /* Light gray for text */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Experience Tab */
+.experienceContent {
+  padding: 20px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  color: #3498db; /* Bright blue for section titles */
+  margin-bottom: 20px;
+}
+
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experienceItem {
+  background: #2c2c2c; /* Dark background for items */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Dark shadow */
+  transition: all 0.3s ease;
+}
+
+.experienceItem:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.experienceItem h3 {
+  font-size: 1.4rem;
+  color: #3498db; /* Bright blue for headings */
+  margin-bottom: 10px;
+}
+
+.experienceItem p {
+  color: #aaa; /* Light gray for text */
+  margin-bottom: 10px;
+}
+
+.experienceItem ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #ddd; /* Light gray for text */
+}
+
+/* Education Tab */
+.educationContent {
+  padding: 20px;
+}
+
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.educationItem {
+  background: #2c2c2c; /* Dark background for items */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Dark shadow */
+  transition: all 0.3s ease;
+}
+
+.educationItem:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.educationItem h3 {
+  font-size: 1.4rem;
+  color: #3498db; /* Bright blue for headings */
+  margin-bottom: 10px;
+}
+
+.educationItem p {
+  color: #aaa; /* Light gray for text */
+}
+
+/* Hobbies Tab */
+.hobbiesSection {
+  padding: 20px;
+}
+
+.hobbiesList {
+  background: #2c2c2c; /* Dark background for items */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Dark shadow */
+  transition: all 0.3s ease;
+}
+
+.hobbiesList:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.hobbiesList p {
+  font-size: 1.2rem;
+  color: #ddd; /* Light gray for text */
+  margin-bottom: 10px;
+}
+
+/* Call to Action Section */
+.ctaSection {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+  background: #3498db; /* Bright blue for contrast */
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Dark shadow */
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.ctaText {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #2c3e50; /* Dark blue for the button */
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #1a2a3a; /* Darker blue on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Skills Section */
+.skillsSection {
+  margin-top: 20px;
+}
+
+.skillsTitle {
+  font-size: 1.5rem;
+  color: #3498db; /* Bright blue for headings */
+  margin-bottom: 10px;
+}
+
+.skillsList {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #ddd; /* Light gray for text */
+}
+
+.skillsList li {
+  margin-bottom: 8px;
+}
+
+/* Additional Hobbies Styles */
+.hobbiesList p {
+  font-size: 1.1rem;
+  color: #ddd; /* Light gray for text */
+  margin-bottom: 10px;
+}
+
+/* Education List Styles */
+.educationItem ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #ddd; /* Light gray for text */
+  margin-top: 10px;
+}
+
+.educationItem ul li {
+  margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .aboutContainer {
+    padding: 20px 10px;
+  }
+
+  .tabsContainer {
+    padding: 15px;
+  }
+
+  .tabList {
+    flex-direction: column; /* Stack tabs vertically on small screens */
+    gap: 5px;
+  }
+
+  .tab {
+    font-size: 0.9rem; /* Smaller font size for tabs */
+    padding: 8px 15px;
+  }
+
+  .title {
+    font-size: 2rem; /* Smaller title font size */
+  }
+
+  .myImage {
+    width: 120px;
+    height: 120px; /* Smaller image on mobile */
+  }
+
+  .description {
+    font-size: 1rem; /* Smaller font size for description */
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem; /* Smaller section titles */
+  }
+
+  .experienceItem h3,
+  .educationItem h3 {
+    font-size: 1.2rem; /* Smaller headings */
+  }
+
+  .ctaTitle {
+    font-size: 1.5rem; /* Smaller CTA title */
+  }
+
+  .ctaText {
+    font-size: 1rem; /* Smaller CTA text */
+  }
+
+  .ctaButton {
+    padding: 10px 20px; /* Smaller button */
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem; /* Even smaller title for very small screens */
+  }
+
+  .myImage {
+    width: 100px;
+    height: 100px; /* Smaller image for very small screens */
+  }
+
+  .description {
+    font-size: 0.9rem; /* Smaller description font size */
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem; /* Smaller section titles */
+  }
+
+  .experienceItem h3,
+  .educationItem h3 {
+    font-size: 1.1rem; /* Smaller headings */
+  }
+
+  .ctaTitle {
+    font-size: 1.3rem; /* Smaller CTA title */
+  }
+
+  .ctaText {
+    font-size: 0.9rem; /* Smaller CTA text */
+  }
+
+  .ctaButton {
+    padding: 8px 16px; /* Smaller button */
+    font-size: 0.8rem;
+  }
+}
