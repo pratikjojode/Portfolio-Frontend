@@ -3,6 +3,16 @@
     {
       "source": "/api/v1/:path*",
       "destination": "https://portfolio-backend-8kb0.onrender.com/api/v1/:path*"
+    },
+    {
+      "source": "/uploads/:path*",
+      "destination": "https://portfolio-backend-8kb0.onrender.com/uploads/:path*"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
