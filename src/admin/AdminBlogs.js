@@ -153,7 +153,8 @@ const AdminBlogs = () => {
                 cover={
                   <img
                     alt={blog.title}
-                    src={blog.image ? `${blog.image}` : "/default-blog.png"}
+                    src={blog.image ? blog.image : "/default-blog.png"}
+                    onError={(e) => (e.target.src = "/default-blog.png")}
                   />
                 }
               >
