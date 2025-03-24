@@ -1,15 +1,15 @@
 /* Updated CSS for a Premium Look */
 
 .admin-skills-container {
-  padding: 40px;
+  padding: 20px;
   min-height: 100vh;
   color: #fff;
 }
 
 .admin-skills-title {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
   color: #fff;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -17,8 +17,9 @@
 
 .actions {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 30px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .add-skill-button {
@@ -26,11 +27,11 @@
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  margin-right: 20px;
+  margin: 10px 5px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -41,13 +42,13 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
 }
 
 .skill-card {
   background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
+  padding: 15px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -62,14 +63,14 @@
 
 .skill-image {
   width: 100%;
-  height: 180px;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .skill-card h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   margin: 10px 0;
   color: #fff;
@@ -85,12 +86,13 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .edit-button,
 .delete-button {
-  padding: 8px 16px;
+  padding: 8px 14px;
   border: none;
   border-radius: 6px;
   font-size: 14px;
@@ -122,10 +124,15 @@
 /* Table View */
 .skills-table {
   border-radius: 12px;
-  overflow: hidden;
+  overflow-x: auto;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.skills-table .ant-table {
+  min-width: 600px;
 }
 
 .skills-table .ant-table-thead > tr > th {
@@ -146,8 +153,8 @@
 }
 
 .skills-table .skill-image {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   border-radius: 6px;
 }

@@ -36,7 +36,10 @@ const SingleBlog = () => {
           <div className="blog-loading">Loading...</div>
         ) : blog ? (
           <div className="single-blog-content">
-            <h1 className="single-blog-title">{blog.title}</h1>
+            <h1 className="single-blog-title">
+              <b>Title:</b>
+              {blog.title}
+            </h1>
             <p className="single-blog-meta">
               <strong>Date:</strong>{" "}
               {new Date(blog.createdAt).toLocaleDateString()}
