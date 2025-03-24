@@ -12,3 +12,64 @@ html,
 body {
   overflow-x: hidden;
 }
+/* src/App.css */
+:root {
+  --primary-color: #1890ff;
+  --background-light: #ffffff;
+  --background-dark: #1f1f1f;
+  --text-light: #333333;
+  --text-dark: #f0f0f0;
+  --card-bg-light: #ffffff;
+  --card-bg-dark: #1d1d1d;
+  --border-light: #f0f0f0;
+  --border-dark: #333333;
+}
+
+.light-theme {
+  --background: var(--background-light);
+  --text-color: var(--text-light);
+  --card-bg: var(--card-bg-light);
+  --border-color: var(--border-light);
+}
+
+.dark-theme {
+  --background: var(--background-dark);
+  --text-color: var(--text-dark);
+  --card-bg: var(--card-bg-dark);
+  --border-color: var(--border-dark);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+/* Update your popup styles to use variables */
+.popup-container {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+/* Add these to ensure Ant Design components adapt */
+.ant-layout {
+  background: var(--background);
+}
+
+.ant-card {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.ant-menu {
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* Add any other component-specific overrides as needed */

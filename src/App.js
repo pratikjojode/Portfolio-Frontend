@@ -24,6 +24,7 @@ import PrCollab from "./pages/PrCollab";
 import Contact from "./pages/Contact";
 import Custom404 from "./components/Custom404";
 import Certificates from "./pages/Certificates";
+import { Analytics } from "@vercel/analytics/react";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -87,6 +88,7 @@ function App() {
     <BrowserRouter>
       <Toaster position="top-right" reverseOrder={false} />
       <ScrollToTop />
+      <Analytics />
       <DynamicTitle />
 
       {/* Popup for Resume */}
